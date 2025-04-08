@@ -8,6 +8,7 @@
     --color-gradient-navy-royal:
         linear-gradient(to right, rgba(0, 0, 128, 1), rgba(65, 105, 225, 1), rgba(0, 0, 128, 1));
     --color-gradient-dark-blue: linear-gradient(to right, rgba(5, 7, 30, 1) 45%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
+    --color-gradient-darker-blue: linear-gradient(to right top, rgba(5, 7, 30, 1) 75%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
     --color-royal: rgba(65, 105, 225, 1);
 }
 
@@ -23,6 +24,10 @@ body {
 .bg-gradient-dark {
     background-image: var(--color-gradient-dark);
 }
+.bg-gradient-darker-blue {
+    background-image: var(--color-gradient-darker-blue);
+}
+
 
 
 .bg-gradient-blue {
