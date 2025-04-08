@@ -16,21 +16,28 @@ body {
     font-family: var(--font-poppins);
 }
 
-.gradient-dark-blue {
+.bg-gradient-dark-blue {
     background-image: var(--color-gradient-dark-blue);
 }
 
 
-.gradient-blue {
+.bg-gradient-blue {
     background-image: var(--color-gradient-navy-royal);
     background-size: 200% 100%;
     transition: background-position 0.5s ease;
 }
 
 /* Hover animation */
-.gradient-blue:hover {
+.bg-gradient-blue:hover {
     background-position: right center;
     animation: gradientShift 3s ease infinite;
+}
+
+
+.border-gradient-blue {
+    border-color: var(--color-primary);
+    border-width: 2px;
+
 }
 
 /* Keyframes for the button gradient animation */

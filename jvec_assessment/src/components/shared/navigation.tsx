@@ -19,10 +19,12 @@ function NavLink({
   to,
   children,
   className,
+  onClick,
 }: {
   to: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }) {
   const location = useLocation();
   const resolved = useResolvedPath(to);
@@ -38,6 +40,7 @@ function NavLink({
   return (
     <Link
       to={to}
+      onClick={onClick}
       className={`${className} ${isActive() ? "font-bold" : "font-normal"}`}
     >
       {children}
@@ -49,14 +52,17 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <header className="relative z-10 gradient-dark-blue">
+    <header className="fixed top-0 w-full z-50 bg-gradient-dark-blue">
       <div className="container mx-auto px-10 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link
               to="/"
               className="text-white font-bold text-xl flex items-center"
+              onClick={closeMenu}
             >
               <img src={logo} alt="logo" />
             </Link>
@@ -104,7 +110,7 @@ export function Navigation() {
           <div className="hidden md:flex">
             <Button
               variant="outline"
-              className="rounded-full gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
+              className="rounded-full bg-gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
             >
               <img src={phone} alt="phone icon" /> +234 818 444 1404
             </Button>
@@ -135,7 +141,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-transparent rounded-lg p-4">
+          <div className="md:hidden z-50 mt-4 bg-transparent rounded-lg p-4">
             <nav className="flex flex-col items-start space-y-4">
               {navItems.map((item) =>
                 item.dropdown ? (
@@ -154,7 +160,11 @@ export function Navigation() {
                     <DropdownMenuContent className="bg-white">
                       {item.subItems?.map((subItem) => (
                         <DropdownMenuItem key={subItem.path}>
-                          <NavLink to={subItem.path} className="w-full">
+                          <NavLink
+                            to={subItem.path}
+                            className="w-full"
+                            onClick={closeMenu}
+                          >
                             {subItem.name}
                           </NavLink>
                         </DropdownMenuItem>
@@ -166,6 +176,7 @@ export function Navigation() {
                     key={item.name}
                     to={item.path}
                     className="text-white hover:text-white/90 transition-colors"
+                    onClick={closeMenu}
                   >
                     {item.name}
                   </NavLink>
@@ -173,7 +184,7 @@ export function Navigation() {
               )}
               <Button
                 variant="outline"
-                className="rounded-full gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
+                className="rounded-full bg-gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
               >
                 <img src={phone} alt="phone icon" /> +234 818 444 1404
               </Button>
