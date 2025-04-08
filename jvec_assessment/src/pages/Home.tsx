@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/hero";
+import HeroImage from "@/components/home/hero_image";
 import { Navigation } from "@/components/shared/navigation";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Navigation />
       <HeroSection />
+      <HeroImage />
     </div>
   );
 };
