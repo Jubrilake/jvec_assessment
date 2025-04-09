@@ -1,7 +1,7 @@
 import { bgPattern } from "@/assets";
 const TrustedConsulted = () => {
   return (
-    <section className="w-full mx-auto p-6 bg-gradient-dark  text-white relative overflow-hidden">
+    <section className="w-full mx-auto pt-16 pb-3 bg-gradient-dark  text-white relative overflow-hidden">
       <img
         src={bgPattern}
         className="absolute opacity-50 top-0 left-0 w-full h-full"

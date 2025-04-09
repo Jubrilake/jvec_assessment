@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { topRightGradient, gridRadial } from "@/assets";
-import { Link } from "react-router";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[100vh] w-full flex flex-col justify-center overflow-hidden bg-gradient-dark-blue py-20">
       <img
         src={topRightGradient}
-        className="absolute blur-3xl top-0 right-0 w-3xl"
+        className="absolute blur-xl top-0 right-0 w-6xl"
         alt=""
       />
 
@@ -48,7 +47,6 @@ const HeroSection = () => {
               size="lg"
               className="rounded-full bg-gradient-blue p-6 border-secondary shadow-sm shadow-primary text-white hover:bg-blue-600/30"
             >
-              <Link to="/sign" />
               Get Started
             </Button>
             <Button
