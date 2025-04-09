@@ -3,7 +3,7 @@ import { curveStroke, heroImage } from "@/assets";
 const HeroImage = () => {
   return (
     <div className=" relative md:block bg-gradient-darker-blue hidden">
-      <img src={curveStroke} alt="" />
+      <img src={curveStroke} alt="stroke" className="w-full" />
       <img
         src={heroImage}
         alt=""

@@ -5,12 +5,15 @@
     --font-poppins: Poppins, sans-serif;
     --color-primary: #4169E1;
     --color-gradient-dark: linear-gradient(to right, rgba(3, 5, 23, 1), rgba(3, 5, 23, 1));
+    --color-gradient-deep-blue: linear-gradient(to right, rgba(5, 7, 30, 1), rgba(5, 7, 30, 1));
     --color-gradient-navy-royal:
         linear-gradient(to right, rgba(0, 0, 128, 1), rgba(65, 105, 225, 1), rgba(0, 0, 128, 1));
     --color-gradient-dark-blue: linear-gradient(to right, rgba(5, 7, 30, 1) 45%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
-    --color-gradient-darker-blue: linear-gradient(to right top, rgba(5, 7, 30, 1) 75%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
+    --color-gradient-darker-blue: linear-gradient(to right top, rgba(5, 7, 30, 1) 80%, rgba(17, 26, 137, 1), rgba(0, 0, 128, 1) 90%);
     --color-royal: rgba(65, 105, 225, 1);
     --color-gradient-blue-radial: radial-gradient(circle at center, rgba(65, 105, 225, 1) 60%, rgba(10, 20, 50, 1) 80%, rgba(3, 5, 23, 1) 100%);
+    --color-gradient-coral: linear-gradient(to right, rgba(1, 180, 222, 1) 45%, rgba(201, 201, 201, 0), rgba(1, 180, 222, 1));
+
 
 }
 
@@ -23,8 +26,16 @@ body {
     background-image: var(--color-gradient-dark-blue);
 }
 
+.bg-gardient-deep-blue {
+    background-image: var(--color-gradient-deep-blue-linear);
+}
+
 .bg-gradient-dark {
     background-image: var(--color-gradient-dark);
+}
+
+.bg-gradient-deep-blue {
+    background-image: var(--color-gradient-deep-blue);
 }
 
 .bg-gradient-darker-blue {
@@ -46,19 +57,17 @@ body {
 }
 
 
-.border-gradient-blue {
-    border-color: var(--color-primary);
+.border-gradient-coral {
+    border-color: var(--color-gradient-coral);
     border-width: 2px;
 
 }
 
-.bg-gradient-blue-radial{
+.bg-gradient-blue-radial {
     background-image: var(--color-gradient-blue-radial);
 }
 
-.border-secondary {
-    border-color: var(--color-royal);
-}
+
 
 /* Keyframes for the button gradient animation */
 @keyframes gradientShift {
