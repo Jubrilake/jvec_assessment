@@ -1,4 +1,4 @@
-import { heroImage, bgPattern } from "@/assets";
+import { bgPattern } from "@/assets";
 // commenet
 const TrustedConsulted = () => {
   return (
@@ -31,7 +31,7 @@ const TrustedConsulted = () => {
 
         <div className=" rounded-xl overflow-hidden ">
           <img
-            src={heroImage}
+            src="/consultant.png"
             alt="Business team collaborating in a modern office"
             className=" h-auto w-full "
           />
