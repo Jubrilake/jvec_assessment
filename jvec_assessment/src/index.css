@@ -10,6 +10,8 @@
     --color-gradient-dark-blue: linear-gradient(to right, rgba(5, 7, 30, 1) 45%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
     --color-gradient-darker-blue: linear-gradient(to right top, rgba(5, 7, 30, 1) 75%, rgba(0, 0, 128, 1), rgba(17, 26, 137, 1));
     --color-royal: rgba(65, 105, 225, 1);
+    --color-gradient-blue-radial: radial-gradient(circle at center, rgba(65, 105, 225, 1) 60%, rgba(10, 20, 50, 1) 80%, rgba(3, 5, 23, 1) 100%);
+
 }
 
 html,
@@ -24,6 +26,7 @@ body {
 .bg-gradient-dark {
     background-image: var(--color-gradient-dark);
 }
+
 .bg-gradient-darker-blue {
     background-image: var(--color-gradient-darker-blue);
 }
@@ -49,6 +52,14 @@ body {
 
 }
 
+.bg-gradient-blue-radial{
+    background-image: var(--color-gradient-blue-radial);
+}
+
+.border-secondary {
+    border-color: var(--color-royal);
+}
+
 /* Keyframes for the button gradient animation */
 @keyframes gradientShift {
     0% {
@@ -62,11 +73,4 @@ body {
     100% {
         background-position: 0% 50%;
     }
-}
-
-
-
-
-.border-secondary {
-    border-color: var(--color-royal);
 }

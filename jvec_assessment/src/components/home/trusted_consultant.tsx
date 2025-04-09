@@ -1,14 +1,13 @@
 import { bgPattern } from "@/assets";
-// commenet
 const TrustedConsulted = () => {
   return (
     <section className="w-full mx-auto p-6 bg-gradient-dark  text-white relative overflow-hidden">
       <img
         src={bgPattern}
         className="absolute opacity-50 top-0 left-0 w-full h-full"
-        alt=""
+        alt="pattern"
       />
-      <div className="bg-gradient-blue-radial z-1 absolute blur-2xl bottom-0 opacity-60 left-0 right-0 w-full h-1/2"></div>
+      <div className="bg-gradient-blue-radial z-1 absolute blur-3xl bottom-0 opacity-60 left-0 right-0 w-full h-[70%]"></div>
 
       <div className="max-w-5xl relative z-3 mx-auto text-center py-8">
         <h1 className="text-5xl font-bold mb-2">
@@ -29,7 +28,7 @@ const TrustedConsulted = () => {
           of their games.
         </p>
 
-        <div className=" rounded-xl overflow-hidden ">
+        <div className="rounded-xl overflow-hidden ">
           <img
             src="/consultant.png"
             alt="Business team collaborating in a modern office"
