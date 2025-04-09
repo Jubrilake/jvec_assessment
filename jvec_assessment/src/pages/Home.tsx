@@ -1,4 +1,5 @@
 import ClientCarousel from "@/components/home/clients_carousel";
+import Complaince from "@/components/home/compliance";
 import HeroSection from "@/components/home/hero";
 import HeroImage from "@/components/home/hero_image";
 import OurOfferings from "@/components/home/our_offerings";
@@ -16,6 +17,7 @@ const Home = () => {
       <TrustedConsulted />
       <OurOfferings />
       <WhatWeRepresent />
+      <Complaince />
     </div>
   );
 };

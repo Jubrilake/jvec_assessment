@@ -32,7 +32,7 @@ import certThirteen from "./cert_thirteen.svg";
 import certFourteen from "./cert_fourteen.svg";
 import certFifteen from "./cert_fiften.svg";
 import certSixteen from "./cert_sixten.svg";
-
+import certNineteen from "./certnineteen.svg";
 // clients assets
 import clientOne from "./client_one.svg";
 import clientTwo from "./client_two.svg";
@@ -68,6 +68,7 @@ export {
   certSix,
   certSixteen,
   certTen,
+  certNineteen,
   certThirteen,
   certThree,
   certTwelve,
