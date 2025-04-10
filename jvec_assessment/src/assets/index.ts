@@ -5,7 +5,8 @@ import heroImage from "./hero_image.svg";
 import curveStroke from "./curve_stroke.svg";
 import magnifyGlass from "./magnifying_glass.svg";
 import puzzle from "./puzzle.svg";
-// import peopleOne from "./people_one.svg";
+import delivery from "./delivery.svg";
+
 import topRightGradient from "./top_right_gradient.png";
 import topLeftGradient from "./top_left_gradient.png";
 import visionIcon from "./vision_icon.svg";
@@ -96,6 +97,7 @@ export {
   handShake,
   arrowIcon,
   bgPattern,
+  delivery,
   curveStroke,
   heroImage,
   phone,

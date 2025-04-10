@@ -3,6 +3,7 @@ import Complaince from "@/components/home/compliance";
 import HeroSection from "@/components/home/hero";
 import HeroImage from "@/components/home/hero_image";
 import OurOfferings from "@/components/home/our_offerings";
+import OurProcess from "@/components/home/our_process";
 import TheyTrustUs from "@/components/home/they_trust_us";
 import TrustedConsulted from "@/components/home/trusted_consultant";
 import WhatWeRepresent from "@/components/home/what_we_represent";
@@ -20,6 +21,7 @@ const Home = () => {
       <WhatWeRepresent />
       <Complaince />
       <TheyTrustUs />
+      <OurProcess />
     </div>
   );
 };
