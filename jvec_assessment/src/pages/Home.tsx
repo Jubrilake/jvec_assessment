@@ -4,15 +4,14 @@ import HeroSection from "@/components/home/hero";
 import HeroImage from "@/components/home/hero_image";
 import OurOfferings from "@/components/home/our_offerings";
 import OurProcess from "@/components/home/our_process";
+import Partners from "@/components/home/partners";
 import TheyTrustUs from "@/components/home/they_trust_us";
 import TrustedConsulted from "@/components/home/trusted_consultant";
 import WhatWeRepresent from "@/components/home/what_we_represent";
-import { Navigation } from "@/components/shared/navigation";
 
 const Home = () => {
   return (
     <div>
-      <Navigation />
       <HeroSection />
       <HeroImage />
       <ClientCarousel />
@@ -22,6 +21,7 @@ const Home = () => {
       <Complaince />
       <TheyTrustUs />
       <OurProcess />
+      <Partners />
     </div>
   );
 };

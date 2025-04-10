@@ -10,7 +10,7 @@ interface InfiniteLogoCarouselProps {
 
 export default function ClientCarousel({
   speed = 30,
-  pauseOnHover = true,
+  pauseOnHover = false,
 }: InfiniteLogoCarouselProps) {
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);

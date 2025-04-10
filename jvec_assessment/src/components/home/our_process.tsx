@@ -27,7 +27,7 @@ export default function OurProcess() {
 
   return (
     <motion.div
-      className="w-full mx-auto p-8 bg-gradient-dark text-white "
+      className="w-full mx-auto p-8 bg-gradient-black text-white "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -63,12 +63,12 @@ export default function OurProcess() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.4 }}
-            className="pr-36"
+            className="pr-96"
           >
             <h3 className="lg:text-4xl text-lg font-bold mb-4">
               Strategic Consultation
             </h3>
-            <p className="mb-12">
+            <p className="mb-12 pr-72">
               We kick off with a strategic consultation to understand your
               brand, goals, and audience
             </p>

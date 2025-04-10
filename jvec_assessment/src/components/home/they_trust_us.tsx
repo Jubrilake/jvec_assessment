@@ -42,7 +42,7 @@ const TheyTrustUs = () => {
   };
 
   return (
-    <section className="w-full mx-auto px-4 py-28 bg-gradient-dark">
+    <section className="w-full mx-auto px-4 py-28 bg-gradient-black">
       <div ref={sectionRef}>
         <ComplianceLogo />
 
