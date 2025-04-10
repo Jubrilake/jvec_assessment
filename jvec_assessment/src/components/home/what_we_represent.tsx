@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function WhatWeRepresent() {
   return (
-    <div className="bg-gradient-dark text-white py-28 px-4 md:px-8 lg:px-16">
+    <div className="bg-gradient-dark py-28 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -15,7 +15,9 @@ export default function WhatWeRepresent() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-4">What we Represent</h2>
+          <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-white">
+            What we Represent
+          </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Our relentless pursuit of excellence is the driving force behind our
             success

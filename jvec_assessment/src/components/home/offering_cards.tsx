@@ -42,7 +42,9 @@ const OfferingCards = ({
         <div className="absolute inset-0 rounded-full border-[1px] border-[rgba(220,174,194,1)] pointer-events-none"></div>
 
         {/* Content */}
-        <div className="relative z-10 p-8 text-center">{title}</div>
+        <div className="relative z-10 p-8 md:text-lg text-sm text-center">
+          {title}
+        </div>
 
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-blue-400">
           <MousePointer size={15} />

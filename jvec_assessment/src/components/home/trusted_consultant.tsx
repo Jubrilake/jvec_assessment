@@ -19,7 +19,7 @@ const fadeUp = {
 const TrustedConsulted = () => {
   return (
     <section className="w-full pt-16 pb-3 bg-gradient-dark text-white relative overflow-hidden">
-      <div className="container mx-auto">
+      <div className="container px-3 mx-auto">
         <motion.img
           src={bgPattern}
           className="absolute opacity-50 top-0 left-0 w-full h-full"
@@ -40,7 +40,7 @@ const TrustedConsulted = () => {
 
         <div className="max-w-5xl relative z-3 mx-auto text-center py-8">
           <motion.h1
-            className="text-5xl font-bold mb-2"
+            className="md:text-5xl text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-white"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -62,7 +62,7 @@ const TrustedConsulted = () => {
           </motion.p>
 
           <motion.p
-            className="text-2xl bg-[rgba(255,255,255,1)] to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent mb-12 leading-relaxed px-10"
+            className="md:text-2xl text-lg bg-[rgba(255,255,255,1)] to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent mb-12 leading-relaxed px-10"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -75,7 +75,7 @@ const TrustedConsulted = () => {
           </motion.p>
 
           <motion.p
-            className="text-gray-300 mb-6 text-xl flex items-center justify-center gap-2"
+            className="text-gray-300 mb-6  md:text-xl text-lg flex items-center justify-center gap-2"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

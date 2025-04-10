@@ -1,6 +1,7 @@
 import ClientCarousel from "@/components/home/clients_carousel";
 import Complaince from "@/components/home/compliance";
-import HeroSection from "@/components/home/hero";
+import GetStarted from "@/components/home/get_started";
+import Hero from "@/components/home/hero";
 import HeroImage from "@/components/home/hero_image";
 import OurOfferings from "@/components/home/our_offerings";
 import OurProcess from "@/components/home/our_process";
@@ -12,7 +13,7 @@ import WhatWeRepresent from "@/components/home/what_we_represent";
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      <Hero />
       <HeroImage />
       <ClientCarousel />
       <TrustedConsulted />
@@ -22,6 +23,7 @@ const Home = () => {
       <TheyTrustUs />
       <OurProcess />
       <Partners />
+      <GetStarted />
     </div>
   );
 };

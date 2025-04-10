@@ -26,7 +26,7 @@ const OurOfferings = () => {
     <section className="w-full mx-auto px-4 py-28 bg-gradient-deep-blue">
       <div className="text-center mb-16">
         <motion.h2
-          className="text-5xl font-bold text-white mb-6"
+          className="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-white mb-6"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
