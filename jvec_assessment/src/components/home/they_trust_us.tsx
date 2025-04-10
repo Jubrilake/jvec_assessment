@@ -56,7 +56,7 @@ const TheyTrustUs = () => {
             variants={textVariants}
             className="text-center mt-24 mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-3 text-white">
+            <h2 className="text-3xl md:text-5xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-white">
               They Trust Us
             </h2>
             <p className="text-gray-300">And so can you</p>
@@ -64,7 +64,7 @@ const TheyTrustUs = () => {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 "
           >
             {clients.map((logo, index) => (
               <motion.div

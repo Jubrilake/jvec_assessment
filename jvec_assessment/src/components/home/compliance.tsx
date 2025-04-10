@@ -13,7 +13,7 @@ const Complaince = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl font-bold leading-16 text-white mb-6">
+        <h2 className="md:text-5xl text-3xl font-bold md:leading-16 leading-10 text-white mb-6">
           Compliance Certifications/ <br />
           Standards We Specialize In
         </h2>

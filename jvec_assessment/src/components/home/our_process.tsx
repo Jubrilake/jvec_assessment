@@ -36,7 +36,7 @@ export default function OurProcess() {
         {/* Header */}
         <motion.div className="text-center mb-12 pb-6 " variants={itemVariants}>
           <motion.h2
-            className="text-4xl font-bold mb-2"
+            className="md:text-5xl text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-white"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", stiffness: 200, delay: 0.5 }}
@@ -44,7 +44,7 @@ export default function OurProcess() {
             Our Process
           </motion.h2>
           <motion.p
-            className="text-lg"
+            className="md:text-lg text-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
@@ -63,12 +63,12 @@ export default function OurProcess() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.4 }}
-            className="pr-96"
+            className="md:pr-0 lg:pr-96"
           >
-            <h3 className="lg:text-4xl text-lg font-bold mb-4">
+            <h3 className="lg:text-4xl text-lg font-bold mb-4 text-transparent bg-clip-text bg-gradient-white">
               Strategic Consultation
             </h3>
-            <p className="mb-12 pr-72">
+            <p className="mb-12 md:pr-72 sm:pr-0 text-sm md:text-lg">
               We kick off with a strategic consultation to understand your
               brand, goals, and audience
             </p>
@@ -81,7 +81,7 @@ export default function OurProcess() {
             <img
               src={puzzle}
               alt="Handshake"
-              className=" w-[20%] absolute bottom-0 right-0"
+              className=" md:w-[20%] w-[40%] absolute bottom-0 right-0"
             />
           </motion.div>
         </motion.div>
@@ -101,12 +101,12 @@ export default function OurProcess() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4 }}
-              className="pr-36"
+              className="lg:pr-36 "
             >
               <h3 className="lg:text-4xl text-lg font-bold mb-4">
                 Collaboration
               </h3>
-              <p className="mb-12">
+              <p className="mb-12 text-sm md:text-lg">
                 At KeySystem, we collaborate closely to ensure the end result
                 meets your expectations and makes you happy
               </p>
@@ -119,7 +119,7 @@ export default function OurProcess() {
               <img
                 src={handShake}
                 alt="Handshake"
-                className=" w-[35%] absolute bottom-0 right-0"
+                className=" w-[40%] absolute bottom-0 right-0"
               />
             </motion.div>
           </motion.div>
@@ -134,10 +134,10 @@ export default function OurProcess() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4 }}
-              className="pr-36"
+              className="lg:pr-36 pr-0"
             >
               <h3 className="lg:text-4xl text-lg font-bold mb-4">Delivery</h3>
-              <p className="mb-12">
+              <p className="mb-12 text-sm md:text-lg">
                 Our delivery rate is 100%; our clients deserve nothing less.
               </p>
             </motion.div>
@@ -149,7 +149,7 @@ export default function OurProcess() {
               <img
                 src={delivery}
                 alt="Handshake"
-                className=" w-[35%] absolute bottom-0 right-0"
+                className=" w-[40%] absolute bottom-0 right-0"
               />
             </motion.div>
           </motion.div>

@@ -19,13 +19,13 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const HeroSection = () => {
+const Hero = () => {
   return (
-    <section className="relative lg:min-h-[100vh] md:min-h-[65vh] w-full flex flex-col justify-center overflow-hidden bg-gradient-dark-blue py-20">
+    <section className="relative lg:min-h-[100vh] md:min-h-[65vh] w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-dark-blue md:py-28 py-36">
       <motion.img
         src={topRightGradient}
         alt=""
-        className="absolute blur-xl top-0 right-0 w-6xl"
+        className="absolute blur-xl z-3 top-0 right-0 w-6xl"
         initial={{ opacity: 0, scale: 1.2 }}
         animate={{ opacity: 0.6, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl mb-4 md:text-6xl lg:text-7xl font-bold text-[rgba(255,255,255,1)] to-[rgba(255,255,255,0.3)]"
+            className="text-4xl mb-4 md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-white"
             variants={itemVariants}
           >
             IT Consulting for <br className="md:hidden" />
@@ -82,20 +82,18 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.div
-            className="flex items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+            className="flex justify-center md:flex-row md:space-x-6 space-y-4 z-4 flex-col space-x-0 sm:space-y-6"
             variants={itemVariants}
           >
             <Button
               variant="outline"
-              size="lg"
-              className="rounded-full bg-gradient-blue p-6 border-secondary shadow-sm shadow-primary text-white hover:bg-blue-600/30"
+              className="rounded-full bg-gradient-blue p-6 border-primary shadow-sm shadow-primary text-white hover:border-primary/80"
             >
               Get Started
             </Button>
             <Button
-              size="lg"
-              variant="ghost"
-              className="rounded-full border-gradient-blue p-6 shadow-sm shadow-primary text-white hover:border-gradient-blue/80"
+              variant="outline"
+              className="rounded-full border-primary border-2 p-6 shadow-sm shadow-primary text-white hover:border-primary/30"
             >
               Learn More
             </Button>
@@ -106,4 +104,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

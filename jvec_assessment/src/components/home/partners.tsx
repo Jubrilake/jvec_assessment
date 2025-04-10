@@ -68,7 +68,7 @@ export default function Partners() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl font-bold mb-4"
+            className="md:text-5xl text-3xl font-bold mb-4"
           >
             Our Partners
           </motion.h2>
@@ -76,7 +76,7 @@ export default function Partners() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-gray-300"
+            className="md:text-lg text-sm text-gray-300"
           >
             Creating a Synergy with global brands
           </motion.p>

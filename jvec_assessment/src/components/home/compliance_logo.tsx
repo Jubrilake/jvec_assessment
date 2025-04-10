@@ -81,7 +81,7 @@ const ComplianceLogo = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 ">
+    <div className="md:flex hidden flex-col items-center justify-center min-h-screen p-6 ">
       <div className="w-full max-w-5xl" ref={sectionRef}>
         <motion.div
           className="p-8 bg-white rounded-xl border-2 border-blue-200 shadow-lg"

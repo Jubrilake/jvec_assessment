@@ -8,7 +8,7 @@ export default function GetStarted() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full  relative flex items-center justify-center bg-gradient-to-br overflow-hidden from-[#000520] via-[#000933] to-[#000520] py-20">
+    <div className="w-full  relative flex items-center justify-center bg-gradient-to-br overflow-hidden bg-gradient-dark py-20">
       <motion.img
         src={topLeftGradient}
         alt=""
@@ -21,7 +21,7 @@ export default function GetStarted() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative w-full max-w-6xl rounded-3xl bg-[#010626] p-8 md:p-12 overflow-hidden"
+        className="relative w-full max-w-6xl rounded-3xl bg-gradient-deep-blue p-8 md:p-12 overflow-hidden"
       >
         <motion.img
           src={curveGradient}
