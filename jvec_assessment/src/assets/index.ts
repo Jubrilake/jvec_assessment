@@ -41,6 +41,10 @@ import clientFour from "./client_four.svg";
 import clientFive from "./client_five.svg";
 import clientSeven from "./client_seven.svg";
 import clientEight from "./client_eight.svg";
+import clientNine from "./client_nine.svg";
+import clientTen from "./client_ten.svg";
+import clientTwelve from "./client_twelve.svg";
+import clientThirteen from "./client_thirteen.svg";
 
 // partner assets
 import partnerOne from "./partner_one.svg";
@@ -80,6 +84,10 @@ export {
   clientSeven,
   clientThree,
   clientTwo,
+  clientNine,
+  clientTen,
+  clientThirteen,
+  clientTwelve,
   facebook,
   instagram,
   linkedIn,

@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
 import {
   certFive,
   certEight,
@@ -23,59 +24,77 @@ import {
 } from "@/assets";
 
 const ComplianceLogo = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // Create a ref for the section container
+  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  const isInView = useInView(sectionRef, {
+    once: false,
+  });
 
-  // Array of compliance logos with their names and imported images
   const logos = [
-    { name: "PCI DSS", image: certOne, width: 80, height: 80 },
-    { name: "ISO 27001", image: certTwo, width: 80, height: 80 },
-    { name: "Process Framework", image: certThree, width: 80, height: 80 },
-    { name: "GDPR", image: certFour, width: 80, height: 80 },
-    { name: "NDPR Audit", image: certFive, width: 80, height: 80 },
-    { name: "ISO 22301", image: certSix, width: 80, height: 80 },
-    { name: "Compliance Seal", image: certSeven, width: 80, height: 80 },
-    { name: "TOGAF", image: certEight, width: 80, height: 80 },
-    { name: "TOGAF", image: certEight, width: 80, height: 80 },
-    { name: "ISO 20000", image: certNine, width: 80, height: 80 },
-    { name: "AICPA SOC", image: certTen, width: 80, height: 80 },
-    { name: "AICPA SOC 2", image: certEleven, width: 80, height: 80 },
-    { name: "COBIT 2019", image: certTwelve, width: 80, height: 80 },
-    { name: "SSAE 18", image: certThirteen, width: 80, height: 80 },
-    { name: "PCAOB", image: certFourteen, width: 80, height: 80 },
-    { name: "COSO", image: certFifteen, width: 80, height: 80 },
-    { name: "SOC 1", image: certSixteen, width: 80, height: 80 },
-    { name: "ISEI", image: certNineteen, width: 80, height: 80 },
+    { name: "PCI DSS", image: certOne, width: 100, height: 100 },
+    { name: "ISO 27001", image: certTwo, width: 100, height: 100 },
+    { name: "Process Framework", image: certThree, width: 100, height: 100 },
+    { name: "GDPR", image: certFour, width: 100, height: 100 },
+    { name: "NDPR Audit", image: certFive, width: 100, height: 100 },
+    { name: "ISO 22301", image: certSix, width: 100, height: 100 },
+    { name: "Compliance Seal", image: certSeven, width: 100, height: 100 },
+    { name: "TOGAF", image: certEight, width: 100, height: 100 },
+    { name: "ISO 20000", image: certNine, width: 100, height: 100 },
+    { name: "AICPA SOC", image: certTen, width: 100, height: 100 },
+    { name: "AICPA SOC 2", image: certEleven, width: 100, height: 100 },
+    { name: "COBIT 2019", image: certTwelve, width: 100, height: 100 },
+    { name: "SSAE 18", image: certThirteen, width: 100, height: 100 },
+    { name: "SSAE 18", image: certThirteen, width: 100, height: 100 },
+    { name: "PCAOB", image: certFourteen, width: 100, height: 100 },
+    { name: "COSO", image: certFifteen, width: 100, height: 100 },
+    { name: "SOC 1", image: certSixteen, width: 100, height: 100 },
+    { name: "SOC 1", image: certNineteen, width: 100, height: 100 },
   ];
 
+  // Container animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Logo item animation variants
+  const logoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6">
-      <div className="w-full max-w-5xl">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 ">
+      <div className="w-full max-w-5xl" ref={sectionRef}>
         <motion.div
           className="p-8 bg-white rounded-xl border-2 border-blue-200 shadow-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
-          transition={{ duration: 0.6 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
         >
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {logos.map((logo, index) => (
               <motion.div
                 key={index}
                 className="flex items-center justify-center p-3"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{
-                  opacity: isLoaded ? 1 : 0,
-                  scale: isLoaded ? 1 : 0.8,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: isLoaded ? index * 0.1 : 0,
-                  type: "spring",
-                  stiffness: 100,
-                }}
+                variants={logoVariants}
                 whileHover={{
                   scale: 1.05,
                   transition: { duration: 0.2 },
@@ -85,7 +104,9 @@ const ComplianceLogo = () => {
                   <img
                     src={logo.image || "/placeholder.svg"}
                     alt={`${logo.name} certification logo`}
-                    className={`object-contain w-[${logo.width}] h-[${logo.height}]`}
+                    width={logo.width}
+                    height={logo.height}
+                    className="object-contain"
                   />
                 </div>
               </motion.div>

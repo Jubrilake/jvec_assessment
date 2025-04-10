@@ -8,20 +8,28 @@ interface OfferingCardProps {
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
+  index: number;
 }
 
 const OfferingCards = ({
   title,
+  index,
   gradient,
   isHovered,
   onHover,
   onLeave,
 }: OfferingCardProps) => {
   return (
-    <div className="w-auto" onMouseEnter={onHover} onMouseLeave={onLeave}>
+    <div
+      className={`w-auto ${index === 1 && "lg:translate-y-16 gap-0"} ${
+        index === 4 && "lg:translate-y-16 gap-0"
+      } ${index === 7 && "lg:translate-y-16 gap-0"}`}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
+    >
       <div
         className={`
-          relative cursor-pointer rounded-full overflow-hidden
+          relative cursor-pointer h-full rounded-full overflow-hidden
           text-white text-center max-w-[230px] flex justify-center items-center
           transition-all duration-300 ease-in-out
           ${isHovered ? "scale-105" : "scale-100"}

@@ -1,13 +1,19 @@
 import { curveStroke, heroImage } from "@/assets";
+import { motion } from "framer-motion";
 
 const HeroImage = () => {
   return (
-    <div className=" relative md:block bg-gradient-darker-blue hidden">
+    <div className="relative md:block bg-gradient-darker-blue hidden">
       <img src={curveStroke} alt="stroke" className="w-full" />
-      <img
+
+      <motion.img
         src={heroImage}
-        alt=""
-        className="absolute w-[60%] -top-12 left-[20%] "
+        alt="Hero"
+        className="absolute w-[60%] -top-12 left-[20%]"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true }}
       />
     </div>
   );
