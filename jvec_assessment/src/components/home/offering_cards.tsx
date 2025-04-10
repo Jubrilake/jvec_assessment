@@ -23,7 +23,7 @@ const OfferingCards = ({
     <div
       className={`w-auto ${index === 1 && "lg:translate-y-16 gap-0"} ${
         index === 4 && "lg:translate-y-16 gap-0"
-      } ${index === 7 && "lg:translate-y-16 gap-0"}`}
+      } ${index === 7 && "lg:translate-y-10 gap-0"}`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >

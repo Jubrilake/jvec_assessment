@@ -3,32 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ComplianceLogo from "./compliance_logo";
-
-import {
-  clientTwo,
-  clientEight,
-  clientFive,
-  clientFour,
-  clientOne,
-  clientSeven,
-  clientThree,
-  clientNine,
-  clientTen,
-  clientTwelve,
-} from "@/assets";
-
-const logos = [
-  { name: "LAPO", src: clientEight },
-  { name: "NPF", src: clientFive },
-  { name: "Sterling", src: clientTwo },
-  { name: "CrusaderSterling", src: clientFour },
-  { name: "NAFC", src: clientOne },
-  { name: "nbf", src: clientSeven },
-  { name: "Military Pensions Board", src: clientThree },
-  { name: "Stanbic Bank", src: clientNine },
-  { name: "Bank Muscat", src: clientTen },
-  { name: "Santander", src: clientTwelve },
-];
+import { clients } from "@/data/clients";
 
 const TheyTrustUs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -67,7 +42,7 @@ const TheyTrustUs = () => {
   };
 
   return (
-    <section className="w-full mx-auto px-4 py-28 bg-gradient-dark">
+    <section className="w-full mx-auto px-4 py-28 bg-gradient-black">
       <div ref={sectionRef}>
         <ComplianceLogo />
 
@@ -91,7 +66,7 @@ const TheyTrustUs = () => {
             variants={containerVariants}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           >
-            {logos.map((logo, index) => (
+            {clients.map((logo, index) => (
               <motion.div
                 key={logo.name}
                 variants={itemVariants}

@@ -1,1 +1,0 @@
-# jvec_assessment

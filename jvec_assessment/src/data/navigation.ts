@@ -1,3 +1,14 @@
+export interface SubNavItem {
+  name: string;
+  path: string;
+}
+
+export interface NavItem {
+  name: string;
+  path: string;
+  dropdown?: boolean;
+  subItems?: SubNavItem[];
+}
 export const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
@@ -17,15 +28,3 @@ export const navItems = [
   },
   { name: "Contact", path: "/contact" },
 ];
-
-export interface SubNavItem {
-  name: string;
-  path: string;
-}
-
-export interface NavItem {
-  name: string;
-  path: string;
-  dropdown?: boolean;
-  subItems?: SubNavItem[];
-}

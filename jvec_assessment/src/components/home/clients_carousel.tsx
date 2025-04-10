@@ -1,39 +1,16 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import {
-  clientOne,
-  clientTwo,
-  clientThree,
-  clientFour,
-  clientFive,
-  clientEight,
-  clientSeven,
-} from "@/assets";
-
-interface Logo {
-  name: string;
-  src: string;
-}
+import { logos } from "@/data/logos";
 
 interface InfiniteLogoCarouselProps {
   speed?: number;
   pauseOnHover?: boolean;
 }
 
-const logos: Logo[] = [
-  { name: "Bank muscat", src: clientOne },
-  { name: "Cognizant", src: clientTwo },
-  { name: "Temenos", src: clientThree },
-  { name: "Sterling", src: clientFour },
-  { name: "NAFC", src: clientFive },
-  { name: "Stanbic Bank", src: clientSeven },
-  { name: "Santander", src: clientEight },
-];
-
 export default function ClientCarousel({
   speed = 30,
-  pauseOnHover = true,
+  pauseOnHover = false,
 }: InfiniteLogoCarouselProps) {
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);

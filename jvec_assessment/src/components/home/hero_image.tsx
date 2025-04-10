@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroImage = () => {
   return (
-    <div className="relative md:block bg-gradient-darker-blue hidden">
+    <div className="relative z-5 md:block bg-gradient-darker-blue hidden">
       <img src={curveStroke} alt="stroke" className="w-full" />
 
       <motion.img
