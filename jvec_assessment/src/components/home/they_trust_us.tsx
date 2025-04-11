@@ -1,5 +1,5 @@
 "use client";
-
+// comment
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ComplianceLogo from "./compliance_logo";
