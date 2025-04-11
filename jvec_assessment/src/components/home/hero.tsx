@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { topRightGradient, gridRadial } from "@/assets";
+import { GradientBorderButton } from "../shared/gradient-border-button";
 
 const containerVariants = {
   hidden: {},
@@ -87,16 +88,11 @@ const Hero = () => {
           >
             <Button
               variant="outline"
-              className="rounded-full bg-gradient-blue p-6 border-primary shadow-sm shadow-primary text-white hover:border-primary/80"
+              className=" rounded-full bg-gradient-blue p-6 border-primary shadow-sm shadow-primary text-white hover:border-primary/80"
             >
               Get Started
             </Button>
-            <Button
-              variant="outline"
-              className="rounded-full border-primary border-2 p-6 shadow-sm shadow-primary text-white hover:border-primary/30"
-            >
-              Learn More
-            </Button>
+            <GradientBorderButton>Learn More</GradientBorderButton>
           </motion.div>
         </motion.div>
       </div>
