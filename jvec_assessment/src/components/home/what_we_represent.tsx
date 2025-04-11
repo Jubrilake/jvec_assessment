@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function WhatWeRepresent() {
   return (
-    <div className="bg-gradient-dark py-28 px-4 md:px-8 lg:px-16">
+    <section className="bg-gradient-dark py-28 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -88,6 +88,6 @@ export default function WhatWeRepresent() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

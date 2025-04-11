@@ -26,7 +26,7 @@ export default function OurProcess() {
   };
 
   return (
-    <motion.div
+    <motion.section
       className="w-full mx-auto p-8 bg-gradient-black text-white "
       initial="hidden"
       animate="visible"
@@ -155,6 +155,6 @@ export default function OurProcess() {
           </motion.div>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
