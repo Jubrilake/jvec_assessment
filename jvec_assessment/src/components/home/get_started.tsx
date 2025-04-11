@@ -26,7 +26,7 @@ export default function GetStarted() {
         <motion.img
           src={curveGradient}
           alt=""
-          className="absolute bottom-0  right-0 w-[270px] "
+          className="absolute bottom-0  right-0 md:w-[270px] w-auto "
           initial={{ opacity: 0, scale: 1.2 }}
           animate={{ opacity: 0.6, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}

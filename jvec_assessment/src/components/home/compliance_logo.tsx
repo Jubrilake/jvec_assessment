@@ -81,7 +81,7 @@ const ComplianceLogo = () => {
   };
 
   return (
-    <div className="md:flex hidden flex-col items-center justify-center min-h-screen p-6 ">
+    <div className="flex  flex-col items-center justify-center min-h-screen p-6 ">
       <div className="w-full max-w-5xl" ref={sectionRef}>
         <motion.div
           className="p-8 bg-white rounded-xl border-2 border-blue-200 shadow-lg"
@@ -102,8 +102,8 @@ const ComplianceLogo = () => {
               >
                 <div className="relative w-full aspect-square flex items-center justify-center">
                   <img
-                    src={logo.image || "/placeholder.svg"}
-                    alt={`${logo.name} certification logo`}
+                    src={logo.image}
+                    alt={`${logo.name} `}
                     width={logo.width}
                     height={logo.height}
                     className="object-contain"
