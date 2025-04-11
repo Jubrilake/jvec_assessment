@@ -26,7 +26,7 @@ const Hero = () => {
       <motion.img
         src={topRightGradient}
         alt=""
-        className="absolute blur-xl z-3 top-0 right-0 w-6xl"
+        className="absolute blur-lg z-3 top-40 right-0 w-5xl"
         initial={{ opacity: 0, scale: 1.2 }}
         animate={{ opacity: 0.6, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
