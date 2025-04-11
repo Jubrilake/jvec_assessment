@@ -56,7 +56,7 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-gradient-dark-blue">
-      <div className="container mx-auto px-10 py-4">
+      <div className="container mx-auto md:px-10 px-5 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link
