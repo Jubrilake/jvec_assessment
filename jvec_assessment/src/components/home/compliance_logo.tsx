@@ -81,15 +81,15 @@ const ComplianceLogo = () => {
   };
 
   return (
-    <div className="flex  flex-col items-center justify-center min-h-screen p-6 ">
-      <div className="w-full max-w-5xl" ref={sectionRef}>
+    <div className="flex  flex-col items-center justify-center min-h-screen md:p-6 p-2">
+      <div className="w-full" ref={sectionRef}>
         <motion.div
-          className="p-8 bg-white rounded-xl border-2 border-blue-200 shadow-lg"
+          className="md:p-8 p-4 bg-white rounded-xl border-2 border-blue-200 shadow-lg"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {logos.map((logo, index) => (
               <motion.div
                 key={index}
@@ -106,7 +106,7 @@ const ComplianceLogo = () => {
                     alt={`${logo.name} `}
                     width={logo.width}
                     height={logo.height}
-                    className="object-contain"
+                    className="object-contain "
                   />
                 </div>
               </motion.div>

@@ -119,10 +119,10 @@ export default function Footer() {
       viewport={{ once: true, amount: 0.1 }}
       className="bg-gradient-dark text-gray-300 py-12 relative"
     >
-      <div className="mx-auto px-6 md:px-8 lg:px-12">
+      <div className="mx-auto container px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Copyright */}
-          <motion.div variants={itemVariants} className="">
+          <motion.div variants={itemVariants}>
             <div className="flex flex-col space-y-1">
               <div className="flex items-center">
                 <div className="relative">
@@ -223,8 +223,6 @@ export default function Footer() {
               </div>
             </div>
           </motion.div>
-
-       
         </div>
         <div className="md:grid-cols-3 grid-cols-1 gap-0 mt-12 grid">
           {/* Social Media */}
