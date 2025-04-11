@@ -84,7 +84,7 @@ export default function Partners() {
 
         <div
           ref={containerRef}
-          className="relative container overflow-hidden bg-gradient-deep-blue"
+          className="relative  overflow-hidden bg-gradient-deep-blue"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >

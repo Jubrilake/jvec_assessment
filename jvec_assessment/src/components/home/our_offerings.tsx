@@ -60,7 +60,7 @@ const OurOfferings = () => {
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full bg-gradient-blue p-6 border-secondary shadow-sm shadow-primary text-white hover:bg-blue-600/30"
+            className="rounded-full bg-gradient-blue p-6 border-primary shadow-sm shadow-primary text-white hover:bg-blue-600/30"
           >
             Learn More
           </Button>

@@ -1,39 +1,22 @@
-"use client"
+"use client";
 
-import { ReactNode, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-
+import { ReactNode } from "react";
+import { Button } from "../ui/moving-border";
 
 export interface GradientBorderButtonProps {
-  gradientClassName?: string
-  className?:string
-  children: ReactNode
+  className?: string;
+  children: ReactNode;
 }
 
-export function GradientBorderButton({ children, className, gradientClassName, ...props }: GradientBorderButtonProps) {
-  const [isHovering, setIsHovering] = useState(false)
-
+export function GradientBorderButton({ children }: GradientBorderButtonProps) {
   return (
-    <div className="relative group rounded-full">
-      {/* Gradient border container */}
-      <div
-        className={cn(
-          "absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:blur-sm",
-          isHovering && "animate-gradient-xy",
-          gradientClassName,
-        )}
-      />
+    <div className="relative group rounded-full md:block">
       <Button
-        size="lg"
-        variant="ghost"
-        className={cn("relative rounded-full bg-black text-white p-6 shadow-sm", className)}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        {...props}
+        borderRadius="1.75rem"
+        className="bg-transparent  dark:bg-slate-900 text-white dark:text-white border-primary dark:border-slate-800"
       >
         {children}
       </Button>
     </div>
-  )
+  );
 }
