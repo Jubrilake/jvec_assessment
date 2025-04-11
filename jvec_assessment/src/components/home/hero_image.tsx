@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroImage = () => {
   return (
-    <div className="relative z-5 md:block bg-gradient-darker-blue hidden ">
+    <section className="relative z-5 md:block bg-gradient-darker-blue hidden ">
       <div className="transform -translate-y-12 ">
         <img src={curveStroke} alt="stroke" className="w-full" />
 
@@ -17,7 +17,7 @@ const HeroImage = () => {
           viewport={{ once: true }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

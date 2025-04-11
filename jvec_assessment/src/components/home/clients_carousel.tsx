@@ -59,7 +59,7 @@ export default function ClientCarousel({
   }, [isPaused, speed]);
 
   return (
-    <div className="w-full bg-gradient-dark py-6 px-4 overflow-hidden">
+    <section className="w-full bg-gradient-dark py-6 px-4 overflow-hidden">
       <div
         ref={containerRef}
         className="relative overflow-hidden"
@@ -89,6 +89,6 @@ export default function ClientCarousel({
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

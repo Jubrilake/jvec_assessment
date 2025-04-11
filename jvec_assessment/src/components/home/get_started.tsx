@@ -8,7 +8,7 @@ export default function GetStarted() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full  relative flex items-center justify-center bg-gradient-to-br overflow-hidden bg-gradient-dark py-20">
+    <section className="w-full  relative flex items-center justify-center bg-gradient-to-br overflow-hidden bg-gradient-dark py-20">
       <motion.img
         src={topLeftGradient}
         alt=""
@@ -113,6 +113,6 @@ export default function GetStarted() {
           </motion.div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
