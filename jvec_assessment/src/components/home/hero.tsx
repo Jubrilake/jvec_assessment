@@ -22,17 +22,17 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section className="relative lg:min-h-[100vh] md:min-h-[65vh] w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-dark-blue md:py-28 py-36">
+    <section className="relative lg:min-h-[100vh] md:min-h-[65vh] w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-darker-blue md:py-28 py-36">
       <motion.img
         src={topRightGradient}
         alt=""
-        className="absolute blur-lg z-3 top-40 right-0 w-5xl"
+        className="absolute  z-3 md:-top-0 md:-right-2 top-20 right-0 md:w-6xl w-full"
         initial={{ opacity: 0, scale: 1.2 }}
         animate={{ opacity: 0.6, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
 
-      <div className="container relative z-10 mx-auto flex flex-col items-center justify-center px-4 text-center md:px-6">
+      <div className="container relative z-5 mx-auto flex flex-col items-center justify-center px-4 text-center md:px-6">
         <motion.img
           src={gridRadial}
           alt=""
@@ -45,7 +45,7 @@ const Hero = () => {
         <motion.img
           src={gridRadial}
           alt=""
-          className="absolute -bottom-96 -right-72 w-7xl opacity-25 z-1"
+          className="absolute -bottom-96 -right-72 w-7xl opacity-25 z-0"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 0.25, x: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}

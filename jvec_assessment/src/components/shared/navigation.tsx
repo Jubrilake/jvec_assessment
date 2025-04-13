@@ -110,7 +110,7 @@ export function Navigation() {
           <div className="hidden md:flex">
             <Button
               variant="outline"
-              className="rounded-full bg-gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
+              className="rounded-full bg-gradient-blue p-5 border-primary text-white hover:bg-blue-600/30"
             >
               <img src={phone} alt="phone icon" /> +234 818 444 1404
             </Button>
@@ -184,7 +184,7 @@ export function Navigation() {
               )}
               <Button
                 variant="outline"
-                className="rounded-full bg-gradient-blue p-5 border-secondary text-white hover:bg-blue-600/30"
+                className="rounded-full bg-gradient-blue p-5 border-primary text-white hover:bg-blue-600/30"
               >
                 <img src={phone} alt="phone icon" /> +234 818 444 1404
               </Button>
