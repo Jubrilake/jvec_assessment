@@ -12,7 +12,7 @@ import WhatWeRepresent from "@/components/home/what_we_represent";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Hero />
       <HeroImage />
       <ClientCarousel />
@@ -24,7 +24,7 @@ const Home = () => {
       <OurProcess />
       <Partners />
       <GetStarted />
-    </div>
+    </main>
   );
 };
 
